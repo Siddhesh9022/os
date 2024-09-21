@@ -1,0 +1,56 @@
+################################################################################
+#
+#   Copyright (c) 2016 Minoca Corp.
+#
+#    This file is licensed under the terms of the GNU General Public License
+#    version 3. Alternative licensing terms are available. Contact
+#    info@minocacorp.com for details. See the LICENSE file at the root of this
+#    project for complete licensing information.
+#
+#   Binary Name:
+#
+#       Chalk Sources
+#
+#   Abstract:
+#
+#       This file describes the common Chalk source files.
+#
+#   Author:
+#
+#       Evan Green 9-Jun-2016
+#
+#   Environment:
+#
+#       POSIX
+#
+################################################################################
+
+OBJS = capi.o        \
+       capilib.o     \
+       cdump.o       \
+       ckcore.o      \
+       compexpr.o    \
+       compiler.o    \
+       compio.o      \
+       compvar.o     \
+       core.o        \
+       debug.o       \
+       dict.o        \
+       except.o      \
+       fiber.o       \
+       gc.o          \
+       gram.o        \
+       int.o         \
+       lex.o         \
+       list.o        \
+       module.o      \
+       string.o      \
+       utils.o       \
+       value.o       \
+       vm.o          \
+       vmsys.o       \
+
+WIN32_OBJS = dynwin32.o \
+
+POSIX_OBJS = dlopen.o \
+

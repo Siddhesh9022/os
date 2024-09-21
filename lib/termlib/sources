@@ -1,0 +1,29 @@
+################################################################################
+#
+#   Copyright (c) 2014 Minoca Corp.
+#
+#    This file is licensed under the terms of the GNU General Public License
+#    version 3. Alternative licensing terms are available. Contact
+#    info@minocacorp.com for details. See the LICENSE file at the root of this
+#    project for complete licensing information.
+#
+#   File Name:
+#
+#       sources
+#
+#   Abstract:
+#
+#       This file contains the list of sources in the image library.
+#
+#   Author:
+#
+#       Evan Green 31-Jul-2014
+#
+#   Environment:
+#
+#       Any
+#
+################################################################################
+
+OBJS = term.o       \
+

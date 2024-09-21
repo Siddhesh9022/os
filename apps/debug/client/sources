@@ -1,0 +1,70 @@
+################################################################################
+#
+#   Copyright (c) 2013 Minoca Corp.
+#
+#    This file is licensed under the terms of the GNU General Public License
+#    version 3. Alternative licensing terms are available. Contact
+#    info@minocacorp.com for details. See the LICENSE file at the root of this
+#    project for complete licensing information.
+#
+#   File Name:
+#
+#       sources
+#
+#   Abstract:
+#
+#       This file contains the common object files for the debug client
+#       application.
+#
+#   Author:
+#
+#       Evan Green 11-Dec-2013
+#
+#   Environment:
+#
+#       Build
+#
+################################################################################
+
+COMMON_OBJS = armdis.o     \
+              cmdtab.o     \
+              coff.o       \
+              consio.o     \
+              dbgapi.o     \
+              dbgdwarf.o   \
+              dbgeval.o    \
+              dbgrcomm.o   \
+              dbgrprof.o   \
+              dbgsym.o     \
+              debug.o      \
+              disasm.o     \
+              dwarf.o      \
+              dwexpr.o     \
+              dwframe.o    \
+              dwline.o     \
+              dwread.o     \
+              elf.o        \
+              exts.o       \
+              profthrd.o   \
+              remsrv.o     \
+              stabs.o      \
+              symbols.o    \
+              thmdis.o     \
+              thm32dis.o   \
+              x86dis.o     \
+
+X86_OBJS = x86/dbgarch.o
+
+X64_OBJS = x64/dbgarch.o
+
+ARMV7_OBJS = armv7/dbgarch.o
+
+ARMV6_OBJS = $(ARMV7_OBJS)
+
+UOS_OBJS = uos/commos.o \
+           uos/extsup.o \
+           uos/ptrace.o \
+           uos/sock.o   \
+
+EXTRA_SRC_DIRS = x86 x64 armv7 armv6 uos
+

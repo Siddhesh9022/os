@@ -1,0 +1,38 @@
+################################################################################
+#
+#   Copyright (c) 2014 Minoca Corp.
+#
+#    This file is licensed under the terms of the GNU General Public License
+#    version 3. Alternative licensing terms are available. Contact
+#    info@minocacorp.com for details. See the LICENSE file at the root of this
+#    project for complete licensing information.
+#
+#   File Name:
+#
+#       sources
+#
+#   Abstract:
+#
+#       This file contains the common object files for the setup application.
+#
+#   Author:
+#
+#       Evan Green 8-Oct-2014
+#
+#   Environment:
+#
+#       Build
+#
+################################################################################
+
+COMMON_OBJS = cache.o          \
+              config.o         \
+              disk.o           \
+              fatdev.o         \
+              fileio.o         \
+              partio.o         \
+              plat.o           \
+              setup.o          \
+              steps.o          \
+              util.o           \
+
