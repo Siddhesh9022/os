@@ -1415,8 +1415,8 @@ Return Value:
     Thread = KeGetCurrentThread();
 
     //
-    // Clear the thread flag indicating that no I/O was done servicing this
-    // fault for the hard fault accounting.
+    //If this request came from servicing a page fault, then increment the
+    // number of hard page faults.
     //
 
     Thread->Flags &= ~THREAD_FLAG_NON_IO_FAULT;

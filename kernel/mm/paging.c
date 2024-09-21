@@ -4964,7 +4964,7 @@ Return Value:
     IoContext.Irp = Irp;
     IoContext.SizeInBytes = PageSize;
     IoContext.BytesCompleted = 0;
-    IoContext.Flags = 0;
+        IoContext.Flags = IO_FLAG_SERVICING_FAULT;
     IoContext.TimeoutInMilliseconds = WAIT_TIME_INDEFINITE;
     IoContext.Write = FALSE;
     Status = MmpPageFilePerformIo(&(OwningSection->PageFileBacking),
@@ -5153,7 +5153,7 @@ Return Value:
                             IoBuffer,
                             ReadOffset,
                             ReadSize,
-                            0,
+                            IO_FLAG_SERVICING_FAULT,
                             WAIT_TIME_INDEFINITE,
                             &BytesRead,
                             NULL);
