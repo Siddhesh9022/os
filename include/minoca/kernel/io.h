@@ -297,14 +297,7 @@ Author:
 
 #define IO_FLAG_NO_ALLOCATE 0x80000000
 
-//
-// This flag is reserved for use by the page cache. It indicates that a write
-// I/O operation should preserve the data because the page cache is about to
-// release its copy of the data. The backing device may have previously been
-// acknowledging writes without actually writing to persistant storage.
-//
 
-#define IO_FLAG_HARD_FLUSH 0x40000000
 
 //
 // This flag is reserved for use by the page cache thread. It indicates that
@@ -321,7 +314,7 @@ Author:
 // data provided before returning.
 //
 
-#define IO_FLAG_DATA_SYNCHRONIZED 0x00000002
+#define IO_FLAG_HARD_FLUSH 0x40000000
 
 //
 // This flag, along with the data synchronized flag, indicates that the
@@ -441,7 +434,7 @@ Author:
 #define FILE_PERMISSION_SET_USER_ID   0x00000800
 
 #define FILE_PERMISSION_MASK 0x00000FFF
-
+#define THREAD_FLAG_NON_IO_FAULT    0x0020
 #define FILE_PERMISSION_ACCESS_MASK 0x00000007
 #define FILE_PERMISSION_OTHER_SHIFT 0
 #define FILE_PERMISSION_GROUP_SHIFT 3
