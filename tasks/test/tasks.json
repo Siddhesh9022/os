@@ -1,0 +1,31 @@
+[
+{
+    "type": "task",
+    "name": "Performance Test",
+    "steps": [
+        {
+            "name": "Run Performance Test",
+            "type": "execute",
+            "parameter": "../../tasks/test/perf_test.sh"
+        }
+    ]
+},
+{
+    "type": "task",
+    "name": "Minoca Pkg Test",
+    "steps": [
+        {
+            "name": "Install Sparrow",
+            "type": "execute",
+            "parameter": "../../tasks/test/install_sparrow.sh"
+        },
+        {
+            "name": "Run Minoca Pkg Test",
+            "type": "execute",
+            "parameter": "../../tasks/test/run_minoca_pkg_test.sh"
+        }
+    ]
+}
+
+]
+
